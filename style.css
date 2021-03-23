@@ -1,0 +1,423 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+@keyframes showintro{
+    0%{
+        opacity: 1;
+    }
+    90%{
+        transform: translateX(0);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(100%);
+    }
+}
+.intro{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    opacity: 0;
+    animation: showintro 5s linear;
+    z-index: 100;
+}
+
+.intro .intro-vid{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.intro .intro-vid video{
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+}
+.intro-content{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.intro-content img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid black;
+}
+@keyframes opacity{
+    0%{
+        opacity: 0;
+    }
+    20%{
+        opacity: 0;
+    }
+    40%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes name{
+    0%{
+        transform: translateX(-120%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+.intro-content .name{
+    font-size: 80px;
+    font-weight: bold;
+    font-family: sans-serif;
+    margin: 20px 0;
+    color: orange;
+    text-shadow: 0 10px 10px black;
+    opacity: 0;
+    animation: name 1s ease 1s,opacity 5s linear;
+}
+@keyframes opacity1{
+    0%{
+        opacity: 0;
+    }
+    20%{
+        opacity: 0;
+    }
+    40%{
+        opacity: 0;
+    }
+    60%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes presents{
+    0%{
+        transform: translateX(120%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+.intro-content .presents{
+    font-size: 36px;
+    font-weight: bold;
+    font-style: italic;
+    font-family: sans-serif;
+    color: crimson;
+    text-shadow: 0 2px 5px black;
+    opacity: 0;
+    animation: presents 1s ease 2s, opacity1 5s linear;
+}
+
+/********Part2 Animation: Main Animation*********/
+
+@keyframes show-itself{
+    0%,100%{
+        opacity: 1;
+    }
+}
+.animation{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: url(images/city/city.png) no-repeat;
+    background-size: 100% 100%;
+    z-index: 50;
+    opacity: 0;
+    animation: show-itself 15s linear 4s;
+}
+@keyframes bird{
+    from{
+        background-position-x: 0;
+    }
+    to{
+        background-position-x: 400px;
+    }
+}
+@keyframes birdmove{
+    0%{
+        left: 0;
+        top: 5%;
+    }
+    100%{
+        left: 100%;
+        top: 5%;
+    }
+}
+.bird{
+    position: absolute;
+    width: 100px;
+    height: 69px;
+    background: url(images/city/bird2.png);
+    animation: bird 1s steps(4) infinite 4s, birdmove 5s linear infinite 4s;
+}
+
+/*********Car1 Animations**********/
+
+@keyframes car1{
+    0%{
+        left: -30%;
+        opacity: 1;
+    }
+    99%{
+        opacity: 1;
+    }
+    100%{
+        left: 130%;
+        opacity: 0;
+    }
+}
+.car1{
+    position: absolute;
+    top: 14%;
+    /* left: 20%; */
+    width: 640px;
+    height: 320px;
+    background: url(images/city/car1.png);
+    animation: car1 3s linear 6s;
+    opacity: 0;
+    z-index: 2;
+}
+
+/*********Car2 Animations**********/
+
+@keyframes car2{
+    0%{
+        right: -30%;
+        opacity: 1;
+    }
+    99%{
+        opacity: 1;
+    }
+    100%{
+        right: 130%;
+        opacity: 0;
+    }
+}
+.car2{
+    position: absolute;
+    top: 5%;
+    /* right: 20%; */
+    width: 640px;
+    height: 320px;
+    background: url(images/city/car2.png);
+    animation: car2 3s linear 6s;
+    opacity: 0;
+    z-index: 1;
+}
+
+/*********Car3 Animations**********/
+
+@keyframes Car3{
+    0%{
+        left: -30%;
+        opacity: 1;
+    }
+    99%{
+        opacity: 1;
+    }
+    100%{
+        left: 130%;
+        opacity: 0;
+    }
+}
+.Car3{
+    position: absolute;
+    top: 10%;
+    /* left: 20%; */
+    width: 640px;
+    height: 320px;
+    background: url(images/city/car3.png);
+    animation: Car3 3s linear 11s;
+    opacity: 0;
+    z-index: 2;
+}
+
+/*********Car4 Animations**********/
+
+@keyframes Car4{
+    0%{
+        right: -30%;
+        opacity: 1;
+    }
+    99%{
+        opacity: 1;
+    }
+    100%{
+        right: 130%;
+        opacity: 0;
+    }
+}
+.Car4{
+    position: absolute;
+    top: 5%;
+    /* right: 20%; */
+    width: 640px;
+    height: 320px;
+    background: url(images/city/car4.png);
+    animation: Car4 3s linear 10s;
+    opacity: 0;
+    z-index: 1;
+}
+
+/********Boy Animation**********/
+
+@keyframes boy{
+    from{
+        background-position: 0;
+    }
+    to{
+        background-position: 4098px;
+    }
+}
+@keyframes boymove{
+    from{
+        left: 0;
+    }
+    to{
+        left: 100%;
+    }
+}
+.boy{
+    position: absolute;
+    width: 273.2px;
+    height: 251px;
+    top: 5%;
+    /* left: 20%; */
+    background: url(images/city/boy_walk4.png);
+    animation: boy 0.6s steps(15) infinite 4s,boymove 8s linear infinite 4s;
+}
+
+/********Girl Animation**********/
+
+@keyframes girl{
+    from{
+        background-position: 0;
+    }
+    to{
+        background-position: 4583px;
+    }
+}
+@keyframes girlmove{
+    from{
+        right: 0;
+    }
+    to{
+        right: 100%;
+    }
+}
+.girl{
+    position: absolute;
+    width: 229.15px;
+    height: 250px;
+    top: 20%;
+    /* left: 20%; */
+    background: url(images/city/girl_walk4.png);
+    animation: girl 0.6s steps(20) infinite 4s,girlmove 8s linear infinite 4s;
+    transform: rotateY(180deg);
+    z-index: 4;
+}
+
+/**********Finish Section**********/
+
+@keyframes vanish{
+    0%,100%{
+        opacity: 0;
+    }
+}
+@keyframes come{
+    0%{
+        transform: translate(0,-100%);
+    }
+    100%{
+        transform: translate(0,0);
+    }
+}
+.finish{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    color: #fff;
+    animation: vanish 14s linear,come 3s ease 14s;
+    background-color: #000;
+}
+.finish-vid{
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: vanish 17s linear, come 3s ease 17s;
+    opacity: 1;
+}
+.finish-vid .video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%,-50%);
+    min-height: 100%;
+    min-width: 100%;
+
+}
+.finish h1{
+    font-size: 100px;
+    z-index: 5;
+    text-shadow: 0 0 10px white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
