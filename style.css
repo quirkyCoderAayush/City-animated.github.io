@@ -31,25 +31,25 @@ body{
 
 .intro .intro-vid{
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
 }
 
 .intro .intro-vid video{
     position: absolute;
-    min-width: 100%;
-    min-height: 100%;
+    min-width: 100vw;
+    min-height: 100vh;
 }
 .intro-content{
-    text-align: center;
     position: absolute;
+    text-align: center;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
 }
 .intro-content img{
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     border: 5px solid black;
 }
@@ -87,9 +87,6 @@ body{
 }
 @keyframes opacity1{
     0%{
-        opacity: 0;
-    }
-    20%{
         opacity: 0;
     }
     40%{
@@ -130,13 +127,15 @@ body{
 }
 .animation{
     position: absolute;
-    width: 100%;
-    height: 100vh;
-    background: url(images/city/city.png) no-repeat;
-    background-size: 100% 100%;
-    z-index: 50;
-    opacity: 0;
-    animation: show-itself 15s linear 4s;
+    top: 12%;
+    left: 0;
+	width: 100vw;
+	height: 100vh;
+	background:url(../images/city/city.png) no-repeat;
+	background-size: 100% 100%;
+	z-index: 50;
+	opacity: 0;
+	animation:show-itself 15s linear 4s;
 }
 @keyframes bird{
     from{
@@ -347,10 +346,10 @@ body{
 }
 .finish{
     position: absolute;
-    top: 0;
+    top: 12%;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     z-index: 200;
     display: flex;
     align-items: center;
@@ -377,43 +376,3 @@ body{
     z-index: 5;
     text-shadow: 0 0 10px white;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
